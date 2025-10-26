@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { ArrowLeft, Phone, AlertCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import MobileContainer from "@/components/MobileContainer";
 
 const CitizenSOS = () => {
   const navigate = useNavigate();
@@ -16,7 +17,8 @@ const CitizenSOS = () => {
   };
 
   return (
-    <div className="min-h-screen p-6 flex flex-col">
+    <MobileContainer>
+      <div className="min-h-screen p-6 flex flex-col">
       <Button 
         variant="ghost" 
         onClick={() => navigate("/citizen/home")}
@@ -98,6 +100,7 @@ const CitizenSOS = () => {
         </p>
       </div>
     </div>
+    </MobileContainer>
   );
 };
 

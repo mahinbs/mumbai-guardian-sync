@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { QrCode, MapPin, Phone, Shield } from "lucide-react";
+import MobileContainer from "@/components/MobileContainer";
 
 const CitizenHome = () => {
   const features = [
@@ -30,7 +31,8 @@ const CitizenHome = () => {
   ];
 
   return (
-    <div className="min-h-screen p-6">
+    <MobileContainer>
+      <div className="min-h-screen p-6">
       <div className="text-center mb-12 animate-fade-in">
         <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-success/20 border-2 border-success mb-4 animate-float">
           <Shield className="w-10 h-10 text-success" />
@@ -39,7 +41,7 @@ const CitizenHome = () => {
         <p className="text-muted-foreground">Mumbai Police at your service</p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+      <div className="grid grid-cols-1 gap-6">
         {features.map((feature, index) => (
           <Link
             key={feature.title}
@@ -58,6 +60,7 @@ const CitizenHome = () => {
         ))}
       </div>
     </div>
+    </MobileContainer>
   );
 };
 

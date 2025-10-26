@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { ArrowLeft, RefreshCw } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import DynamicQR from "@/components/DynamicQR";
+import MobileContainer from "@/components/MobileContainer";
 
 const PoliceQRID = () => {
   const navigate = useNavigate();
@@ -22,7 +23,8 @@ const PoliceQRID = () => {
   }, [navigate]);
 
   return (
-    <div className="min-h-screen p-6">
+    <MobileContainer>
+      <div className="min-h-screen p-6">
       <Button 
         variant="ghost" 
         onClick={() => navigate("/police/dashboard")}
@@ -68,6 +70,7 @@ const PoliceQRID = () => {
         </div>
       </div>
     </div>
+    </MobileContainer>
   );
 };
 

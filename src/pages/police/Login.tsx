@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { toast } from "sonner";
+import MobileContainer from "@/components/MobileContainer";
 
 const PoliceLogin = () => {
   const navigate = useNavigate();
@@ -27,7 +28,8 @@ const PoliceLogin = () => {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center p-6">
+    <MobileContainer>
+      <div className="min-h-screen flex items-center justify-center p-6">
       <div className="w-full max-w-md">
         <div className="text-center mb-8 animate-fade-in">
           <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-primary/20 border-2 border-primary mb-4 animate-float">
@@ -77,6 +79,7 @@ const PoliceLogin = () => {
         </form>
       </div>
     </div>
+    </MobileContainer>
   );
 };
 

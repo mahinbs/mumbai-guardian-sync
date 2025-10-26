@@ -1,6 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import { ArrowLeft, Phone, Navigation } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import MobileContainer from "@/components/MobileContainer";
 
 const CitizenNearby = () => {
   const navigate = useNavigate();
@@ -14,7 +15,8 @@ const CitizenNearby = () => {
   ];
 
   return (
-    <div className="min-h-screen p-6">
+    <MobileContainer>
+      <div className="min-h-screen p-6">
       <Button 
         variant="ghost" 
         onClick={() => navigate("/citizen/home")}
@@ -66,6 +68,7 @@ const CitizenNearby = () => {
         ))}
       </div>
     </div>
+    </MobileContainer>
   );
 };
 

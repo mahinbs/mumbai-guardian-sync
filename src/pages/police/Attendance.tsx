@@ -1,6 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import { ArrowLeft, CheckCircle, Clock, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import MobileContainer from "@/components/MobileContainer";
 
 const PoliceAttendance = () => {
   const navigate = useNavigate();
@@ -14,7 +15,8 @@ const PoliceAttendance = () => {
   ];
 
   return (
-    <div className="min-h-screen p-6">
+    <MobileContainer>
+      <div className="min-h-screen p-6">
       <Button 
         variant="ghost" 
         onClick={() => navigate("/police/dashboard")}
@@ -62,6 +64,7 @@ const PoliceAttendance = () => {
         ))}
       </div>
     </div>
+    </MobileContainer>
   );
 };
 

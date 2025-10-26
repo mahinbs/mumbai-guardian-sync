@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { ArrowLeft, Camera, CheckCircle, XCircle, AlertCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import QRScanner from "@/components/QRScanner";
+import MobileContainer from "@/components/MobileContainer";
 
 const CitizenVerify = () => {
   const navigate = useNavigate();
@@ -26,7 +27,8 @@ const CitizenVerify = () => {
   };
 
   return (
-    <div className="min-h-screen p-6">
+    <MobileContainer>
+      <div className="min-h-screen p-6">
       <Button 
         variant="ghost" 
         onClick={() => navigate("/citizen/home")}
@@ -103,6 +105,7 @@ const CitizenVerify = () => {
         </div>
       )}
     </div>
+    </MobileContainer>
   );
 };
 

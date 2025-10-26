@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { toast } from "sonner";
 import GlowingOrb from "@/components/GlowingOrb";
 import StatsCard from "@/components/StatsCard";
+import MobileContainer from "@/components/MobileContainer";
 
 const PoliceDashboard = () => {
   const navigate = useNavigate();
@@ -37,7 +38,8 @@ const PoliceDashboard = () => {
   };
 
   return (
-    <div className="min-h-screen p-6">
+    <MobileContainer>
+      <div className="min-h-screen p-6">
       {/* Header */}
       <div className="flex justify-between items-center mb-8 animate-fade-in">
         <div>
@@ -58,7 +60,7 @@ const PoliceDashboard = () => {
       </div>
 
       {/* Stats Row */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+      <div className="grid grid-cols-1 gap-4 mb-8">
         <StatsCard
           icon={Clock}
           label="Current Shift"
@@ -81,7 +83,7 @@ const PoliceDashboard = () => {
       </div>
 
       {/* Action Cards */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div className="grid grid-cols-1 gap-4">
         <Link to="/police/qr-id">
           <div className="glass-card rounded-xl p-6 hover:scale-105 transition-transform cursor-pointer glow-primary">
             <div className="flex items-center gap-4">
@@ -111,6 +113,7 @@ const PoliceDashboard = () => {
         </Link>
       </div>
     </div>
+    </MobileContainer>
   );
 };
 
